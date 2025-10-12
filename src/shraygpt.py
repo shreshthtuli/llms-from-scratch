@@ -151,16 +151,16 @@ class ShrayGPT(L.LightningModule):
         total_loss, main_loss, aux_loss = self._calculate_loss(logits, y, aux_loss_)
         self.manual_backward(total_loss)
         muon_opt.step();  adamw_opt.step()
-        self.log('train_loss', main_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
-        self.log('train_aux_loss', aux_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
+        self.log('train_loss', main_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
+        self.log('train_aux_loss', aux_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
         return total_loss
 
     def validation_step(self, batch, batch_idx):
         x, y = batch
         logits, _, aux_loss_ = self(x)
         total_loss, main_loss, aux_loss = self._calculate_loss(logits, y, aux_loss_)
-        self.log('val_loss', main_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True)
-        self.log('val_aux_loss', aux_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True)
+        self.log('val_loss', main_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
+        self.log('val_aux_loss', aux_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
         return total_loss
 
     def configure_optimizers(self):
