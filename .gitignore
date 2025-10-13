@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .lightning_studio/
 logs/lightning_logs/
+checkpoints/*.ckpt

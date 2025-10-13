@@ -166,8 +166,17 @@ class ShrayGPT(L.LightningModule):
     def configure_optimizers(self):
         matrix_params, other_params = split_params_for_muon(self)
 
-        # Typical starting hyperparams; tune as needed for your setup
-        muon_opt  = torch.optim.Muon(matrix_params, lr=1.5e-3, weight_decay=0.0)   # no wd is common for Muon weights
-        adamw_opt = torch.optim.AdamW(other_params, lr=3e-4, weight_decay=1e-2)    # wd on non-Muon params
+        lr = self.hparams.learning_rate
+        muon_opt = torch.optim.Muon(matrix_params, lr=lr, weight_decay=0.0)
+        adamw_opt = torch.optim.AdamW(other_params, lr=lr, weight_decay=1e-2)
 
-        return [muon_opt, adamw_opt]
+        muon_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(muon_opt, T_0=10)
+        adamw_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(adamw_opt, T_0=10)
+
+        return (
+            [muon_opt, adamw_opt],
+            [
+                {"scheduler": muon_sched, "interval": "epoch"},
+                {"scheduler": adamw_sched, "interval": "epoch"},
+            ],
+        )
