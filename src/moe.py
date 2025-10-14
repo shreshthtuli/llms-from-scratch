@@ -16,7 +16,7 @@ class MoE(nn.Module):
         B, T, C = x.shape
         x_flat = x.view(-1, C)  # (B*T, C)
         router_logits = self.gate(x_flat)
-        routing_weights = F.softmax(router_logits, dim=1, dtype=torch.float)
+        routing_weights = F.softmax(router_logits, dim=1, dtype=torch.float32)
         top_k_weights, top_k_indices = torch.topk(routing_weights, self.num_experts_per_tok, dim=-1)
         # --- Start: Auxiliary Loss Calculation ---
         S, E = routing_weights.size()
@@ -26,18 +26,17 @@ class MoE(nn.Module):
         aux_loss = E * (importance * load).sum()
         # Normalize the weights of the top-k experts
         top_k_weights = top_k_weights / top_k_weights.sum(dim=-1, keepdim=True)
-        # Initialize final output tensor
-        sparse_output = torch.zeros_like(x_flat)
-        # Get expert outputs and combine them
-        expert_outputs = torch.stack([self.experts[i](x_flat) for i in range(len(self.experts))])
-        # Create a mask for indexing
-        idx = torch.arange(x_flat.shape[0]).to(x.device)
-        # Weighted sum of the expert outputs
-        for i in range(self.num_experts_per_tok):
-            expert_idx = top_k_indices[:, i]
-            weight = top_k_weights[:, i].unsqueeze(-1)
-            sparse_output += weight * expert_outputs[expert_idx, idx]
+        top_k_weights = top_k_weights.to(x_flat.dtype)
+
+        # Compute all expert activations: (S, num_experts, C)
+        expert_outputs = torch.stack([expert(x_flat) for expert in self.experts], dim=1)
+
+        # Gather the selected experts per token and apply routing weights
+        gather_indices = top_k_indices.unsqueeze(-1).expand(-1, -1, C)
+        selected_expert_outputs = expert_outputs.gather(1, gather_indices)
+        weighted_expert_output = (selected_expert_outputs * top_k_weights.unsqueeze(-1)).sum(dim=1)
+
         shared_output = self.shared_expert(x_flat)
-        final_output = sparse_output + shared_output
+        final_output = weighted_expert_output + shared_output
         # Return the main output and the auxiliary loss
         return final_output.view(B, T, C), aux_loss
