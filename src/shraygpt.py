@@ -151,6 +151,8 @@ class ShrayGPT(L.LightningModule):
         total_loss, main_loss, aux_loss = self._calculate_loss(logits, y, aux_loss_)
         self.manual_backward(total_loss)
         muon_opt.step();  adamw_opt.step()
+        muon_sched, adamw_sched = self.lr_schedulers()
+        muon_sched.step(); adamw_sched.step()
         self.log('train_loss', main_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
         self.log('train_aux_loss', aux_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True, sync_dist=True)
         return total_loss
@@ -166,9 +168,8 @@ class ShrayGPT(L.LightningModule):
     def configure_optimizers(self):
         matrix_params, other_params = split_params_for_muon(self)
 
-        lr = self.hparams.learning_rate
-        muon_opt = torch.optim.Muon(matrix_params, lr=lr, weight_decay=0.0)
-        adamw_opt = torch.optim.AdamW(other_params, lr=lr, weight_decay=1e-2)
+        muon_opt = torch.optim.Muon(matrix_params, lr=self.hparams.learning_rate_muon, weight_decay=0.0)
+        adamw_opt = torch.optim.AdamW(other_params, lr=self.hparams.learning_rate_adamw, weight_decay=1e-2)
 
         muon_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(muon_opt, T_0=10)
         adamw_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(adamw_opt, T_0=10)
