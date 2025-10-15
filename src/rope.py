@@ -25,7 +25,7 @@ class RoPECache:
     def _build(self, max_pos: int):
         """(Re)build cos/sin tables for a new max_pos."""
         self.max_pos = max_pos
-        inv_freq = 1.0 / (10000.0 ** (torch.arange(0, self.head_dim, 2, device=self.device).float() / self.head_dim))
+        inv_freq = 1.0 / (self.base ** (torch.arange(0, self.head_dim, 2, device=self.device).float() / self.head_dim))
         t = torch.arange(max_pos, device=self.device).float()
         freqs = torch.outer(t, inv_freq)  # (max_pos, head_dim/2)
         self.cos = torch.cos(freqs)

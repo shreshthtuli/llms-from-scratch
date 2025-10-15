@@ -88,8 +88,6 @@ class CausalSelfAttentionMLA(nn.Module):
             pos = torch.arange(start_pos, start_pos + T, device=x.device)
             cos_q, sin_q = self.rope_cache_q.get(pos)  # (T, Dh/2)
             q = apply_rope_single(q, cos_q, sin_q)
-            cos_k, sin_k = self.rope_cache_k.get(pos)  # (T, Dl/2)
-            k_lat = apply_rope_single(k_lat, cos_k, sin_k)
 
         # Concatenate latent cache
         if kv_cache is not None:
@@ -101,18 +99,16 @@ class CausalSelfAttentionMLA(nn.Module):
         # Expand to per-head for attention
         k_attn, v_attn = self._expand_latent_to_heads(k_lat_all, v_lat_all)  # (B,H,Tk,Dh)
 
+        if self.use_rope:
+            Tk = k_attn.size(2)
+            pos_k = torch.arange(0, Tk, device=x.device)      # past positions start at 0 in cache
+            cos_kh, sin_kh = self.rope_cache_q.get(pos_k)     # (Tk, Dh/2)  <-- reuse Dh cache
+            k_attn = apply_rope_single(k_attn, cos_kh, sin_kh)
+
         # Scaled dot-product attention
-        is_causal = kv_cache is None  # follow your original convention
-        y = F.scaled_dot_product_attention(q, k_attn, v_attn, attn_mask=None, dropout_p=self.dropout.p if self.training else 0.0, is_causal=is_causal)  # (B,H,T,Dh)
+        y = F.scaled_dot_product_attention(q, k_attn, v_attn, attn_mask=None, dropout_p=self.dropout.p if self.training else 0.0, is_causal=True)  # (B,H,T,Dh)
 
         y = y.transpose(1, 2).contiguous().view(B, T, C)
-        y = self.proj(y)
+        y = self.dropout(self.proj(y))
 
-        # Update latent cache
-        if kv_cache is not None:
-            k_new = torch.cat([kv_cache.k, k_lat], dim=2)
-            v_new = torch.cat([kv_cache.v, v_lat], dim=2)
-        else:
-            k_new, v_new = k_lat, v_lat
-
-        return y, KVCache(k_new, v_new)
+        return y, KVCache(k_lat_all, v_lat_all)

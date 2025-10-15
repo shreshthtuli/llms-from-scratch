@@ -11,7 +11,7 @@ class Block(nn.Module):
         super(Block, self).__init__()
         self.norm1 = RMSNorm(d_model)
         self.norm2 = RMSNorm(d_model)
-        self.mha = CausalSelfAttentionMLA(d_model, n_head, d_head, d_latent=576, max_pos=32768, dropout=dropout)
+        self.mha = CausalSelfAttentionMLA(d_model, n_head, d_head, d_latent=64, max_pos=max_pos, dropout=dropout)
         self.moe = MoE(d_model, num_experts=num_experts, num_experts_per_tok=num_experts_per_tok, dropout=dropout)
     
     def forward(self, x, kv_cache=None, start_pos=0): # post-norm as done in the original Attention is All You Need paper
@@ -87,7 +87,7 @@ class ShrayGPT(L.LightningModule):
             prompt = prompt[:, -self.block_size:]
 
         logits, kv_caches, _ = self(prompt, kv_cache_list=None, start_pos=0)  # prefill start_pos = 0
-        cur_pos = kv_caches[0].T 
+        cur_pos = prompt.size(1)
 
         for _ in range(max_new_tokens):
             last_token = prompt[:, -1:]                      # (1,1)
@@ -171,8 +171,10 @@ class ShrayGPT(L.LightningModule):
         muon_opt = torch.optim.Muon(matrix_params, lr=self.hparams.learning_rate_muon, weight_decay=0.0)
         adamw_opt = torch.optim.AdamW(other_params, lr=self.hparams.learning_rate_adamw, weight_decay=1e-2)
 
-        muon_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(muon_opt, T_0=10)
-        adamw_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(adamw_opt, T_0=10)
+        muon_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(muon_opt, T_0=2000, 
+                        eta_min=self.hparams.learning_rate_muon / 2)
+        adamw_sched = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(adamw_opt, T_0=2000,
+                        eta_min=self.hparams.learning_rate_adamw / 2)
 
         return (
             [muon_opt, adamw_opt],
