@@ -160,6 +160,7 @@ cython_debug/
 #.idea/
 .lightning_studio/
 logs/lightning_logs/
+logs/distill_qwen2_0p6_from_4b/
 logs/grpo_sorting/
 checkpoints/*.ckpt
 checkpoints/qwen2**
