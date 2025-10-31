@@ -1,0 +1,13 @@
+# Jupyter Book config
+# Option A: Provide a logo and hide the title text in the navbar
+logo: assets/llm-from-scratch-thumbnail.png
+
+html:
+  favicon: assets/favicon.ico
+  # Sphinx Book Theme options
+  theme:
+    options:
+      logo_only: true   # <- hides the text title; shows only the logo
+
+# Optionally also clear the title (used in HTML <title> tag)
+title: "
