@@ -2,17 +2,20 @@
 
 Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
 
+
+<div align="center" id="top">
+  
 <a target="_blank" href="https://lightning.ai/shraysteam/environments/shrays-studio">
   <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg" alt="Open In Studio"/>
 </a>
-
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Jupyter](https://img.shields.io/badge/Notebook-Interactive-orange)
 ![License](https://img.shields.io/github/license/shreshthtuli/llms-from-scratch)
 [![GitHub code](https://img.shields.io/badge/View%20Code-on%20GitHub-black?logo=github)](https://github.com/shreshthtuli/llms-from-scratch)
 ![Stars](https://img.shields.io/github/stars/shreshthtuli/llms-from-scratch?style=social)
-
+ 
+</div>
 ## 🚀 Course Highlights
 - **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
 - **Practical checkpoints** and datasets so you can experiment without babysitting boilerplate.
