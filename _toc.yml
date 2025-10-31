@@ -1,0 +1,16 @@
+format: jb-book
+root: README
+chapters:
+  - file: 01-tokenization
+  - file: 02-tinyllm
+  - file: 03-advancing-our-llm
+  - file: 04-data
+  - file: 05-scaling-laws
+  - file: 06-pretraining
+  - file: 07-supervised-finetuning
+  - file: 08-rlhf-alignment
+  - file: 09-lora-rlvr
+  - file: 10-pruning-distillation
+  - file: 11-appendix-position-embeddings
+  - file: 12-appendix-quantisation
+  - file: 13-appendix-peft
