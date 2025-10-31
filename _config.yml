@@ -1,13 +1,51 @@
-# Jupyter Book config
-# Option A: Provide a logo and hide the title text in the navbar
-logo: assets/llm-from-scratch-thumbnail.png
+# ============================================================
+# Jupyter Book Configuration for "LLMs from Scratch"
+# ============================================================
+
+title: "LLMs from Scratch"
+author: "Shreshth Tuli"
+logo: assets/logo.png
+description: "Hands-on course to build Large Language Models (LLMs) from first principles — theory, math, and PyTorch code explained step by step."
+language: en
+copyright: "© 2025 Shreshth Tuli"
+
+# Disable executing notebooks during build (to keep pages light)
+execute:
+  execute_notebooks: "off"
+
+# Launch buttons for interactivity
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+
+# Repository metadata (for “Edit this page” links)
+repository:
+  url: https://github.com/shreshthtuli/llms-from-scratch
+  path_to_book: "notebooks"
+  branch: main
 
 html:
   favicon: assets/favicon.ico
-  # Sphinx Book Theme options
-  theme:
-    options:
-      logo_only: true   # <- hides the text title; shows only the logo
+  use_repository_button: true
+  use_edit_page_button: true
+  use_issues_button: true
+  baseurl: "https://shreshthtuli.github.io/llms-from-scratch"
+  comments:
+    hypothesis: false
+  extra_footer: |
+    <p align="center">
+      Made with ❤️ by <a href="https://shreshthtuli.github.io">Shreshth Tuli</a> |
+      <a href="https://github.com/shreshthtuli/llms-from-scratch">View on GitHub</a>
+    </p>
 
-# Optionally also clear the title (used in HTML <title> tag)
-title: "
+sphinx:
+  config:
+    html_show_copyright: false
+    html_show_sourcelink: false
+    html_theme_options:
+      repository_url: "https://github.com/shreshthtuli/llms-from-scratch"
+      use_repository_button: true
+      use_download_button: true
+      navigation_with_keys: true
+      show_toc_level: 2
