@@ -165,3 +165,4 @@ logs/grpo_sorting/
 data/MNIST/
 checkpoints/*.ckpt
 checkpoints/qwen2**
+runs/*/
