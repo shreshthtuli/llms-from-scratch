@@ -5,7 +5,7 @@ Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes 
 
 <div align="center" id="top">
   
-<a target="_blank" href="https://lightning.ai/shraysteam/environments/shrays-studio">
+<a target="_blank" href="https://lightning.ai/shraysteam/environments/llms-from-scratch">
   <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg" alt="Open In Studio"/>
 </a>
 
@@ -18,7 +18,7 @@ Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes 
 </div>
 
 ## 🚀 Course Highlights
-- **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
+- **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/llms-from-scratch).
 - **Practical checkpoints** and datasets so you can experiment without babysitting boilerplate.
 - **Theory, references, and best practices** interwoven with code so every concept sticks.
 - **Production-aware workflow** covering training, scaling, alignment, quantization, and deployment-friendly fine-tuning.
