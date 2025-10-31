@@ -2,6 +2,7 @@
 # Jupyter Book Configuration for "LLMs from Scratch"
 # ============================================================
 
+title: ""
 author: "Shreshth Tuli"
 logo: assets/logo.png
 description: "Hands-on course to build Large Language Models (LLMs) from first principles — theory, math, and PyTorch code explained step by step."
