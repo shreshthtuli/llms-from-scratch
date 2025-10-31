@@ -19,7 +19,6 @@ launch_buttons:
   binderhub_url: "https://mybinder.org"
   notebook_interface: "jupyterlab"
 
-# Repository metadata (for “Edit this page” links)
 repository:
   url: https://github.com/shreshthtuli/llms-from-scratch
   path_to_book: "."
@@ -50,3 +49,4 @@ sphinx:
       navigation_with_keys: true
       show_toc_level: 2
       default_mode: light
+      home_page_in_toc: true
