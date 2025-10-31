@@ -59,6 +59,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 1. Click the **Open in Studio** badge above.
 2. Authenticate with Lightning (or create a free account).
 3. Explore the notebooks in a fully provisioned environment with GPU options.
+4. The studio has all model checkpoints saved and you can test them with code given in `test-model.ipynb`.
 
 ### Option B: Run Locally
 1. **Clone the repository**
