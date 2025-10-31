@@ -1,23 +1,14 @@
----
-layout: default
-title: "LLMs from Scratch: A Practical Course"
-description: "A hands-on curriculum to build, train, and align large language models from the ground up."
----
+![Course Thumbnail](https://github.com/shreshthtuli/llms-from-scratch/blob/main/assets/llm-from-scratch-thumbnail.png?raw=true)
 
-# LLMs from Scratch: A Practical Course
-
-![LLM illustration](https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-hero.png)
-
-<a target="_blank" href="https://lightning.ai/new?repo_url=https%3A%2F%2Fgithub.com%2Fshreshthtuli%2Fllms-from-scratch%2F">
-  <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg" alt="Open in Studio" />
+<a target="_blank" href="https://lightning.ai/shraysteam/environments/shrays-studio">
+  <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg" alt="Open In Studio"/>
 </a>
 
 Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
-
 ---
 
 ## 🚀 Course Highlights
-- **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](#hands-on-playground).
+- **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
 - **Practical checkpoints** and datasets so you can experiment without babysitting boilerplate.
 - **Theory, references, and best practices** interwoven with code so every concept sticks.
 - **Production-aware workflow** covering training, scaling, alignment, quantization, and deployment-friendly fine-tuning.
@@ -43,9 +34,6 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 | 12 | Appendix: Quantisation Strategies | [12-appendix-quantisation.ipynb](https://nbviewer.org/github/shreshthtuli/llms-from-scratch/blob/main/12-appendix-quantisation.ipynb) |
 | 13 | Appendix: Parameter-Efficient Tuning | [13-appendix-peft.ipynb](https://nbviewer.org/github/shreshthtuli/llms-from-scratch/blob/main/13-appendix-peft.ipynb) |
 
-> 💡 **Tip:** GitHub Pages will render this README as a polished landing page. All notebook links above open directly in NbViewer for an optimal in-browser experience. Feel free to fork the repo and enable Pages to publish your own branded course site.
-
----
 
 ## 🧠 What You'll Learn
 - The end-to-end data flow of an LLM—from tokenization and batching to inference-time decoding.
@@ -54,7 +42,6 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 - Practical alignment techniques: SFT, preference modeling, RLHF, and reward modeling.
 - Deployment-ready compression: pruning, distillation, quantization, and PEFT recipes.
 
----
 
 ## ⚙️ Quick Start
 
@@ -71,7 +58,8 @@ Each module is a standalone notebook packed with explanations, exercises, and im
    ```
 2. **Install dependencies** (recommended: Python 3.10+)
    ```bash
-   pip install -r requirements.txt
+   pip install uv
+   uv sync
    ```
 3. **Launch Jupyter**
    ```bash
@@ -81,7 +69,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 
 > Need data? Check the [`data/`](data/) directory and follow the dataset preparation steps inside each notebook.
 
----
+
 
 ## 🧭 Suggested Learning Path
 1. **Foundations (Modules 01–03)** – Understand tokens, build your first transformer, and iterate on architecture improvements.
@@ -92,21 +80,20 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 
 Mix and match as needed—every notebook is designed to stand on its own, but following this order unlocks the smoothest learning curve.
 
----
+
 
 ## 🛠 Hands-On Playground
 - **Lightning Studio**: Run the entire repo in the cloud with zero setup using the badge above.
 - **GitHub Codespaces**: Launch a dev container directly from the repo for quick edits.
 - **Local GPUs / Clusters**: Scripts in [`src/`](src/) support distributed and mixed-precision training out of the box.
 
----
+
 
 ## 👨‍🏫 About the Instructor
 I’m **Shreshth Tuli**—researcher, builder, and educator focused on making advanced ML systems approachable. I’ve shipped production LLMs, authored peer-reviewed papers, and taught hundreds of practitioners how to wield these models responsibly. Expect honest takes, transparent trade-offs, and plenty of real-world war stories.
 
-Connect with me on [Twitter](https://twitter.com/shreshthtuli) · [LinkedIn](https://www.linkedin.com/in/shreshthtuli/) · [Personal Site](https://shreshthtuli.com)
+Connect with me on [LinkedIn](https://www.linkedin.com/in/shreshthtuli/).
 
----
 
 ## 🤝 Contributions
 Contributions, bug reports, and suggestions are warmly welcomed! To contribute:
@@ -116,10 +103,9 @@ Contributions, bug reports, and suggestions are warmly welcomed! To contribute:
 
 Check the issue tracker for bite-sized tasks or open a discussion if you want to propose new modules.
 
----
 
 ## 📄 License
-This project is open-sourced under the [MIT License](LICENSE). Feel free to use the materials for your own learning, workshops, or derivative courses—just keep attribution intact.
+This project is open-sourced under the [Apache 2.0 License](LICENSE). Feel free to use the materials for your own learning, workshops, or derivative courses—just keep attribution intact.
 
 ---
 
