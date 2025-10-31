@@ -19,19 +19,19 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 
 | Module | Topic | Notebook |
 | --- | --- | --- |
-| 01 | Tokenization Foundations | [01-tokenization.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/01-tokenization.ipynb) |
-| 02 | Building a Tiny LLM | [02-tinyllm.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/02-tinyllm.ipynb) |
-| 03 | Advancing Our LLM | [03-advancing-our-llm.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/03-advancing-our-llm.ipynb) |
-| 04 | Data Engineering for LLMs | [04-data.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/04-data.ipynb) |
-| 05 | Scaling Laws in Practice | [05-scaling-laws.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/05-scaling-laws.ipynb) |
-| 06 | Pretraining at Scale | [06-pretraining.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/06-pretraining.ipynb) |
-| 07 | Supervised Fine-Tuning | [07-supervised-finetuning.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/07-supervised-finetuning.ipynb) |
-| 08 | RLHF and Alignment | [08-rlhf-alignment.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/08-rlhf-alignment.ipynb) |
-| 09 | LoRA & RLVR Techniques | [09-lora-rlvr.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/09-lora-rlvr.ipynb) |
-| 10 | Pruning & Distillation | [10-pruning-distillation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/10-pruning-distillation.ipynb) |
-| 11 | Appendix: Position Embeddings | [11-appendix-position-embeddings.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/11-appendix-position-embeddings.ipynb) |
-| 12 | Appendix: Quantisation Strategies | [12-appendix-quantisation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/12-appendix-quantisation.ipynb) |
-| 13 | Appendix: Parameter-Efficient Tuning | [13-appendix-peft.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/13-appendix-peft.ipynb) |
+| 01 | Tokenization Foundations | [01-tokenization.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/01-tokenization.html) |
+| 02 | Building a Tiny LLM | [02-tinyllm.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/02-tinyllm.html) |
+| 03 | Advancing Our LLM | [03-advancing-our-llm.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/03-advancing-our-llm.html) |
+| 04 | Data Engineering for LLMs | [04-data.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/04-data.html) |
+| 05 | Scaling Laws in Practice | [05-scaling-laws.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/05-scaling-laws.html) |
+| 06 | Pretraining at Scale | [06-pretraining.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/06-pretraining.html) |
+| 07 | Supervised Fine-Tuning | [07-supervised-finetuning.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/07-supervised-finetuning.html) |
+| 08 | RLHF and Alignment | [08-rlhf-alignment.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/08-rlhf-alignment.html) |
+| 09 | LoRA & RLVR Techniques | [09-lora-rlvr.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/09-lora-rlvr.html) |
+| 10 | Pruning & Distillation | [10-pruning-distillation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/10-pruning-distillation.html) |
+| 11 | Appendix: Position Embeddings | [11-appendix-position-embeddings.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/11-appendix-position-embeddings.html) |
+| 12 | Appendix: Quantisation Strategies | [12-appendix-quantisation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/12-appendix-quantisation.html) |
+| 13 | Appendix: Parameter-Efficient Tuning | [13-appendix-peft.ipynb](https://shreshthtuli.github.io/llms-from-scratch/pages/13-appendix-peft.html) |
 
 
 ## 🧠 What You'll Learn
