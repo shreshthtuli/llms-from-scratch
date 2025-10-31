@@ -49,3 +49,4 @@ sphinx:
       use_download_button: true
       navigation_with_keys: true
       show_toc_level: 2
+      default_mode: light
