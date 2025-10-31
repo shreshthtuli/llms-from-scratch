@@ -5,7 +5,7 @@
 </a>
 
 Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
----
+
 
 ## 🚀 Course Highlights
 - **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
@@ -13,7 +13,7 @@ Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes 
 - **Theory, references, and best practices** interwoven with code so every concept sticks.
 - **Production-aware workflow** covering training, scaling, alignment, quantization, and deployment-friendly fine-tuning.
 
----
+
 
 ## 📚 Course Structure
 Each module is a standalone notebook packed with explanations, exercises, and implementation details. View them on GitHub, launch them via GitHub Pages, or open them interactively in Lightning Studio.
@@ -61,11 +61,12 @@ Each module is a standalone notebook packed with explanations, exercises, and im
    pip install uv
    uv sync
    ```
-3. **Launch Jupyter**
+3. **Add API Keys** in `.env` file. Follow `.env.example`.
+4. **Launch Jupyter**
    ```bash
    jupyter lab
    ```
-4. Open any notebook to start experimenting.
+5. Open any notebook to start experimenting.
 
 > Need data? Check the [`data/`](data/) directory and follow the dataset preparation steps inside each notebook.
 
@@ -107,7 +108,5 @@ Check the issue tracker for bite-sized tasks or open a discussion if you want to
 ## 📄 License
 This project is open-sourced under the [Apache 2.0 License](LICENSE). Feel free to use the materials for your own learning, workshops, or derivative courses—just keep attribution intact.
 
----
-
-Ready to build? Clone the repo, launch a notebook, and start crafting your own LLMs from the ground up. 🚀
+> The best way to learn LLMs is to build one. 🚀
 
