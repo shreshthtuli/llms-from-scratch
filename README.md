@@ -1,11 +1,10 @@
 ![Course Thumbnail](https://github.com/shreshthtuli/llms-from-scratch/blob/main/assets/llm-from-scratch-thumbnail.png?raw=true)
 
+Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
+
 <a target="_blank" href="https://lightning.ai/shraysteam/environments/shrays-studio">
   <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg" alt="Open In Studio"/>
 </a>
-
-Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
-
 
 ## 🚀 Course Highlights
 - **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
