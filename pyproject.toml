@@ -17,6 +17,7 @@ dependencies = [
     "pandas>=2.3.3",
     "peft>=0.17.1",
     "plotly[express]>=6.3.1",
+    "python-dotenv>=1.2.1",
     "rich>=14.1.0",
     "scipy>=1.16.2",
     "seaborn>=0.13.2",
