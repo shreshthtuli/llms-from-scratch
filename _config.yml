@@ -22,7 +22,7 @@ launch_buttons:
 # Repository metadata (for “Edit this page” links)
 repository:
   url: https://github.com/shreshthtuli/llms-from-scratch
-  path_to_book: "notebooks"
+  path_to_book: "."
   branch: main
 
 html:
