@@ -16,6 +16,7 @@ Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes 
 ![Stars](https://img.shields.io/github/stars/shreshthtuli/llms-from-scratch?style=social)
  
 </div>
+
 ## 🚀 Course Highlights
 - **Hands-on notebooks** for every lesson—clone locally or launch instantly in [Lightning Studio](https://lightning.ai/shraysteam/environments/shrays-studio).
 - **Practical checkpoints** and datasets so you can experiment without babysitting boilerplate.
