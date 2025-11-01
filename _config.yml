@@ -42,6 +42,7 @@ sphinx:
   config:
     html_show_copyright: false
     html_show_sourcelink: false
+    html_extra_path: ["assets"]
     html_theme_options:
       repository_url: "https://github.com/shreshthtuli/llms-from-scratch"
       use_repository_button: true

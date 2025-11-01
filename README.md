@@ -1,4 +1,4 @@
-![Course Thumbnail](https://github.com/shreshthtuli/llms-from-scratch/blob/main/assets/llm-from-scratch-thumbnail.png?raw=true)
+![Course Thumbnail](https://github.com/shreshthtuli/llms-from-scratch/blob/main/assets/llm-from-scratch-thumbnail.jpg?raw=true)
 
 Welcome to **LLMs from Scratch**, an all-killer-no-filler curriculum that takes you from tokenization to alignment with meticulously crafted Jupyter notebooks, actionable theory, and production-ready code. Whether you are a researcher, engineer, or curious builder, this course gives you the scaffolding to demystify modern LLMs and deploy your own.
 
