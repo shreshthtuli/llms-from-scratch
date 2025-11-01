@@ -35,6 +35,11 @@ jobs:
       - name: Build Jupyter Book site
         run: jb build .
 
+      - name: Copy assets to build folder
+        run: |
+          mkdir -p _build/html/assets
+          cp -r assets/* _build/html/assets/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
