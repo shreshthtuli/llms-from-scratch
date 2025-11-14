@@ -14,3 +14,4 @@ chapters:
   - file: 11-appendix-position-embeddings
   - file: 12-appendix-quantisation
   - file: 13-appendix-peft
+  - file: 14-bonus-diffusion-llms
