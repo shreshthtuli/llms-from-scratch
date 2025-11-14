@@ -43,7 +43,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 | 11 | Appendix: Position Embeddings | [11-appendix-position-embeddings.ipynb](https://shreshthtuli.github.io/llms-from-scratch/11-appendix-position-embeddings.html) |
 | 12 | Appendix: Quantisation Strategies | [12-appendix-quantisation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/12-appendix-quantisation.html) |
 | 13 | Appendix: Parameter-Efficient Tuning | [13-appendix-peft.ipynb](https://shreshthtuli.github.io/llms-from-scratch/13-appendix-peft.html) |
-
+| 14 | Bonus: Energy Based and Diffusion LLMs | [14-bonus-diffusion-llms.ipynb](https://shreshthtuli.github.io/llms-from-scratch/14-bonus-diffusion-llms.html) |
 
 ## 🧠 What You'll Learn
 - The end-to-end data flow of an LLM—from tokenization and batching to inference-time decoding.
@@ -51,6 +51,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 - Strategies for scaling datasets, managing checkpoints, and monitoring training stability.
 - Practical alignment techniques: SFT, preference modeling, RLHF, and reward modeling.
 - Deployment-ready compression: pruning, distillation, quantization, and PEFT recipes.
+- Bonus section on Energy based models (EBMs) and Diffusion LLMs.
 
 
 ## ⚙️ Quick Start
