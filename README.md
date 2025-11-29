@@ -44,6 +44,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 | 12 | Appendix: Quantisation Strategies | [12-appendix-quantisation.ipynb](https://shreshthtuli.github.io/llms-from-scratch/12-appendix-quantisation.html) |
 | 13 | Appendix: Parameter-Efficient Tuning | [13-appendix-peft.ipynb](https://shreshthtuli.github.io/llms-from-scratch/13-appendix-peft.html) |
 | 14 | Bonus: Energy Based and Diffusion LLMs | [14-bonus-diffusion-llms.ipynb](https://shreshthtuli.github.io/llms-from-scratch/14-bonus-diffusion-llms.html) |
+| 15 | Bonus: State Space Models | [15-bonus-state-space-models.ipynb](https://shreshthtuli.github.io/llms-from-scratch/15-bonus-state-space-models.html) |
 
 ## 🧠 What You'll Learn
 - The end-to-end data flow of an LLM—from tokenization and batching to inference-time decoding.
@@ -51,7 +52,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 - Strategies for scaling datasets, managing checkpoints, and monitoring training stability.
 - Practical alignment techniques: SFT, preference modeling, RLHF, and reward modeling.
 - Deployment-ready compression: pruning, distillation, quantization, and PEFT recipes.
-- Bonus section on Energy based models (EBMs) and Diffusion LLMs.
+- Bonus sections on Energy based models (EBMs), Diffusion LLMs, and State Space Models (SSMs).
 
 
 ## ⚙️ Quick Start
@@ -88,7 +89,7 @@ Each module is a standalone notebook packed with explanations, exercises, and im
 1. **Foundations (Modules 01–03)** – Understand tokens, build your first transformer, and iterate on architecture improvements.
 2. **Data & Scaling (Modules 04–06)** – Curate corpora, tune training loops, and scale pretraining experiments responsibly.
 3. **Alignment (Modules 07–09)** – Apply SFT, RLHF, and efficient adaptation techniques to align your model with human intent.
-4. **Optimization (Modules 10–13)** – Compress, fine-tune, and deploy models using state-of-the-art efficiency tricks.
+4. **Optimization (Modules 10–15)** – Compress, fine-tune, and deploy models using state-of-the-art efficiency tricks.
 5. **Capstone** – Combine your learnings to train, align, and ship a bespoke LLM tailored to your use case.
 
 Mix and match as needed—every notebook is designed to stand on its own, but following this order unlocks the smoothest learning curve.
