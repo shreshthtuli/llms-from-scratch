@@ -2,7 +2,7 @@
 # Jupyter Book Configuration for "LLMs from Scratch"
 # ============================================================
 
-title: ""
+title: "LLMs from Scratch — Build & Train Large Language Models"
 author: "Shreshth Tuli"
 logo: assets/logo.png
 description: "Hands-on course to build Large Language Models (LLMs) from first principles — theory, math, and PyTorch code explained step by step."
@@ -38,8 +38,18 @@ html:
       <a href="https://github.com/shreshthtuli/llms-from-scratch">View on GitHub</a>
     </p>
 
+]
 sphinx:
   config:
+    html_title: "LLMs from Scratch — Build & Train Large Language Models"
+    html_short_title: "LLMs from Scratch"
+    html_baseurl: "https://shreshthtuli.github.io/llms-from-scratch"
+    extensions:
+      - sphinx_sitemap           # generate sitemap.xml
+      - sphinxext.opengraph      # OpenGraph / social cards
+    ogp_site_url: "https://shreshthtuli.github.io/llms-from-scratch/"
+    ogp_site_name: "LLMs from Scratch — Build & Train Large Language Models"
+    ogp_description_length: 200
     html_show_copyright: false
     html_show_sourcelink: false
     html_theme_options:
