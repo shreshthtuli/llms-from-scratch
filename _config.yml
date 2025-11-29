@@ -38,7 +38,7 @@ html:
       <a href="https://github.com/shreshthtuli/llms-from-scratch">View on GitHub</a>
     </p>
 
-]
+
 sphinx:
   config:
     html_title: "LLMs from Scratch — Build & Train Large Language Models"
