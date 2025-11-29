@@ -44,7 +44,7 @@ sphinx:
     - sphinx_sitemap           # generate sitemap.xml
     - sphinxext.opengraph      # OpenGraph / social cards
   config:
-    html_title: "LLMs from Scratch — Build & Train Large Language Models"
+    html_title: "LLMs from Scratch"
     html_short_title: "LLMs from Scratch"
     html_baseurl: "https://shreshthtuli.github.io/llms-from-scratch"
     ogp_site_url: "https://shreshthtuli.github.io/llms-from-scratch/"
