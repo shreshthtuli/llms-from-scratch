@@ -106,7 +106,7 @@ Mix and match as needed—every notebook is designed to stand on its own, but fo
 ## 👨‍🏫 About the Instructor
 I’m **Shreshth Tuli**—researcher, builder, and educator focused on making advanced ML systems approachable. I’ve shipped production LLMs, authored peer-reviewed papers, and taught hundreds of practitioners how to wield these models responsibly. Expect honest takes, transparent trade-offs, and plenty of real-world war stories.
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/shreshth-tuli/).
+More about me [here](https://stuli.ai/). Connect with me on [LinkedIn](https://www.linkedin.com/in/shreshth-tuli/).
 
 
 ## 🤝 Contributions
